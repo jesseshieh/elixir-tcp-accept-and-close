@@ -3,7 +3,7 @@ defmodule AcceptClose do
 
   # from https://medium.com/blackode/quick-easy-tcp-genserver-with-elixir-and-erlang-10189b25e221
   def start_link(_) do
-    ip = Application.get_env(:gen_tcp, :ip, {127, 0, 0, 1})
+    ip = Application.get_env(:gen_tcp, :ip, {0, 0, 0, 0})
     port = Application.get_env(:gen_tcp, :port, 4000)
     GenServer.start_link(__MODULE__, [ip, port], [])
   end
