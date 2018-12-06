@@ -14,3 +14,11 @@ def deps do
 end
 ```
 
+## Configuration
+
+To change the port or listening ip, add these to your `config.exs`
+
+```elixir
+config :gen_tcp_accept_and_close, port: 4000
+config :gen_tcp_accept_and_close, ip: {0, 0, 0, 0}
+```
