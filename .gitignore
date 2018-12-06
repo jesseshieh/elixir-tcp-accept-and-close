@@ -20,5 +20,5 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-main-*.tar
+gen_tcp_accept_and_close-*.tar
 
