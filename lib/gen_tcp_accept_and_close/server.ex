@@ -6,7 +6,7 @@ defmodule GenTcpAcceptAndClose.Server do
   def start_link(_) do
     ip = Application.get_env(:gen_tcp_accept_and_close, :ip, {0, 0, 0, 0})
     port = Application.get_env(:gen_tcp_accept_and_close, :port, 4000)
-    Logger.debug "[gen_tcp_accept_and_close] Starting #{__MODULE__} listening on #{to_string(:inet_parse.ntoa(ip))}:#{port}"
+    Logger.info "[gen_tcp_accept_and_close] Starting #{__MODULE__} listening on #{to_string(:inet_parse.ntoa(ip))}:#{port}"
     GenServer.start_link(__MODULE__, [ip, port], [])
   end
 
